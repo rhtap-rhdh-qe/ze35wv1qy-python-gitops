@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ze35wv1qy-python-gitops
+  description: This is GitOps manifest for ze35wv1qy-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ze35wv1qy-python
+    janus-idp.io/tekton: ze35wv1qy-python 
+    backstage.io/kubernetes-id: ze35wv1qy-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ze35wv1qy-python
